@@ -1,0 +1,929 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* home page modelling*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2{
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+h4{
+  font-size: 20px;
+  color: #222;
+}
+h6{
+  font-weight: 700;
+  font-size: 12px;
+}
+p{
+  font-size: 16px;
+  color:#ffffff;
+  margin:  15px 0 20px 0;
+}
+.section-p1{
+  padding: 40px 80px;
+}
+button.normal{
+font-size: 14px;
+font-weight: 600;
+padding: 15px 30px;
+color: #000;
+background-color: #fff;
+border-radius: 4px;
+cursor: pointer;
+border: none;
+outline: none;
+transition: 0.2s;
+}
+button.white{
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid #fff;
+  outline: none;
+  transition: 0.2s;
+  }
+.section-m1{
+  margin: 40px 0;
+}
+.body{
+  width: 100%;
+}
+/*ჰედერი ყველასთვის*/
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #E3E6F3;
+  box-shadow: 0 5px 15px rgba(12, 1, 155, 0.09);
+  z-index: 999;
+  position: sticky;
+  top:0;
+  left:0;
+}
+#navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar li{
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+#navbar li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color:#1a1a1a;
+  transition: 0.3s ease-in-out;
+}
+#navbar li a:hover,
+#navbar li a.active{
+  color:rgb(51, 51, 219);
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: rgb(51, 51, 219);
+  position:absolute;
+  bottom:-4px;
+  left:20px;
+}
+#mobile {
+  display: none;
+  align-items:center;
+}
+#close{
+  display: none;
+}
+/*home page*/
+#hero{
+  background-image: url(photo/6387a1c9d346c1001894965c.jpg);
+  height: 90vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top 25% right 0;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+#hero h1{
+  color:rgb(0, 160, 160);
+}
+#hero button{
+  
+  background-color: transparent;
+  color: rgb(51, 82, 255);
+  border: 1;
+  padding: 12px 70px 12px 60px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 15px;
+}
+#hero button:hover{
+  background-color: #264ebd;
+  color: #fffbfb;
+}
+/* ჩვენი კომპანიის შეთავაზებები*/
+#feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#feature .fe-box{
+width: 180px;
+text-align: center;
+padding:25px 15px;
+box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+border:1px solid #cce7d0;
+border-radius: 4px;
+margin:15px 0;
+}
+#feature .fe-box:hover{
+  box-shadow: 10px 10px 54px rgba(70,62,221,0.1);
+}
+#feature .fe-box img{
+  width:100%;
+  margin-bottom: 10px;
+}
+#feature .fe-box h6{
+  display:inline-block;
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 4px;
+  color:#ffffff;
+  background-color: #8f9afd;
+}
+
+/* მანქანები გზიდან სექცია*/
+#product1 .active_status h6{
+  display: inline-block;
+  padding: 9px 8px 6px 8px;
+  line-height: 1;
+  border-radius: 4px;
+  color:#ffffff;
+  background-color: rgb(0, 255, 106);
+}
+#product1 p{
+  color:#585757;
+}
+#product1{
+  text-align: center;
+}
+#product1 .pro{
+  width: 23%;
+  min-width: 250px;
+  padding:10px 12px;
+  border: 1px solid #cce7d0;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.04);
+  margin: 15px 0;
+  transition: 0.2s ease;
+}
+#product1 .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.08);
+
+}
+#product1 .pro img{
+  width:100%;
+  border-radius: 20px;
+}
+#product1 .pro .description{
+  text-align: start;
+  padding: 10px 0;
+}
+#product1 .pro .description span{
+  color: #606063;
+  font-size: 12px;
+}
+#product1 .pro .description h5{
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+#product1 .pro .description i{
+  font-size: 12px;
+  color: antiquewhite;
+}
+#product1 .pro .description h4{
+  font-size: 15px;
+  padding-top: 1px;
+  font-weight: 700;
+  color: #088178;
+}
+#product1 .pro-container{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+/* ბანერი ვინ კოდებზე*/
+#banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("photo/carssss/istockphoto-515168383-612x612.jpg");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+#banner h4{
+  color:#c54b4b;
+  font-size: 20px;
+}
+#banner h2{
+  color:#eeee4c;
+  font-size: 30px; 
+  padding: 10px 0;
+}
+#banner h2 span{
+  color:#c54b4b;
+}
+#banner button:hover{
+  background: #2545fd;
+  color:#fff;
+}
+/*baneri Setavazebebze*/
+#sm-banner{
+  display: flex;
+  justify-content: space-between;
+}
+#sm-banner .banner-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("photo/autocom.jpg");
+  min-width: 580px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding:30px;
+}
+#sm-banner .banner-box1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("photo/copart_baltimore_maryland_th.jpg");
+  min-width: 580px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding:30px;
+}
+#sm-banner h4{
+  color: #ff0000;
+  font-size: 20px;
+  font-weight: 300;
+}
+#sm-banner h2{
+  color: #fc0000;
+  font-size: 28px;
+  font-weight: 800;
+}
+#sm-banner span{
+  color: #ff0000;
+  font-size: 20px;
+  font-weight: 800;
+  padding-bottom: 15px;
+}
+#sm-banner .banner-box:hover button{
+  background:#2545fd;
+  border: 1px solid #2545fd;
+}
+#sm-banner .banner-box1:hover button{
+  background:#2545fd;
+  border: 1px solid #2545fd;
+
+}
+#newsletter{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url("photo/autospec\ -\ Copy.jpg");
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: #4a65af;
+}
+#newsletter p{
+  font-size: 14px;
+  font-weight: 600;
+  color:#fff;
+}
+#newsletter h4{
+font-size: 22px;
+font-weight: 700;
+color: #fff;
+}
+#newsletter input{
+  height: 3.123rem;
+  padding: 0 1.25em;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#newsletter button{
+  background-color: #088178;
+  color: #fff;
+  white-space: nowrap;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+#newsletter .form{
+  display: flex;
+  width: 40%;
+}
+/*footer*/
+#inf p{
+  color: #222;
+}
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+footer .logo{
+  margin-bottom: 30px;
+}
+footer h4{
+  font-size: 14px;
+  padding-bottom: 20px;
+}
+footer p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+}
+footer a{
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+footer .follow{
+  margin-top: 20px;
+}
+footer .follow i{
+  color: #465b52;
+  padding-right: 4px;
+  cursor: pointer;
+}
+footer .follow i:hover,
+footer a:hover{
+  color: #088178;
+}
+footer .copyright{
+  width: 100%;
+  text-align: center;
+}
+
+/* shop page modelling*/
+#page_header{
+  background-image: url('photo/autospec\ -\ Copy.jpg');
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+}
+#page_header h2,
+#page_header p{
+  color: #fff;
+}
+
+#pagination{
+  text-align: center;
+}
+#pagination a{
+  text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px;
+  border-radius:  4px;
+  color: #fff;
+  font-weight: 600;
+}
+#pagination a i{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+
+/*sacdeli mauwyebloba*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#main-photo {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+#main-photo:hover {
+  transform: scale(1.1);
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-content {
+  max-width: 80%;
+  max-height: 80%;
+  margin: auto;
+  position: relative;
+}
+
+.modal-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 24px;
+}
+
+#prev-photo, #next-photo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#prev-photo {
+  left: 10px;
+}
+
+#next-photo {
+  right: 10px;
+}
+#prodetails{
+  display:flex;
+  margin-top: 20px;
+
+}
+#prodetails .single-pro-details{
+ width: 50%;
+ padding-top: 50px;
+  margin-left: 20px;
+  max-width: 400px;
+}
+
+#prodetails .single-pro-details h4{
+  padding: 20px 0 15px 0;
+}
+#prodetails .single-pro-details h2{
+ font-size: 26px;
+}
+#prodetails1 button{
+  margin-top: 0%;
+  margin-bottom: 10px;
+  background: #2545fd;
+  color: #ffffff;
+}
+.button-select {
+  display: inline-block;
+}
+
+.button-select button {
+  display: inline-block;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 1px solid #ffffff;
+  background-color: #2545fd;
+  color: #ffffff;
+  font-style: normal;
+}
+
+.button-select .options {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #2545fd;
+  border: 1px solid #ffffff;
+}
+
+.button-select .options button {
+  display: block;
+  width: 100%;
+  padding: 8px 16px;
+  text-align: left;
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  background-color: #2545fd;
+}
+#prodetails1 span{
+  line-height: 25px;
+}
+/*about page creation*/
+#about1{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+ .about-box {
+  border-radius: 50px; /* Adjust the border-radius for circular edges */
+  overflow: hidden;   /* Ensure content doesn't overflow the rounded corners */
+  width: 400px;       /* Set the width of the box */
+  margin: auto;   /* Center the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#page_headerblog{
+  background-image: url('photo/autospec\ -\ Copy.jpg');
+  width: 100%;
+  height: 25vh;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 20px;
+}
+#page_headerblog h2,
+#page_headerblog p{
+  color: #fff;
+}
+
+#about-header h2{
+  text-align: center;
+  font-weight:700;
+  font-style: oblique;
+}
+#about-header span{
+  color: #2545fd;
+  font-weight: bold;
+  font-style:oblique;
+}
+
+
+.about-box img {
+  border-radius: 20px;
+  margin: 20px 20px 10px;
+  width: 90%;        /* Make the image fill the container */
+  border-bottom: 1px solid #ccc; /* Add a border below the image */
+}
+
+.about-box-content {
+  padding: 20px;
+}
+
+.about-box h2 {
+  color: #333;
+}
+
+.about-box p {
+  padding: 20px;
+  color: #666;
+}
+.about-box1 {
+  border-radius: 50px; /* Adjust the border-radius for circular edges */
+  overflow: hidden;   /* Ensure content doesn't overflow the rounded corners */
+  width: 400px;       /* Set the width of the box */
+  margin: auto;   /* Center the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.about-box1 img {
+  border-radius: 20px;
+  margin: 20px 20px 10px;
+  width: 90%;      /* Make the image fill the container */
+  border-bottom: 1px solid #ccc; /* Add a border below the image */
+}
+
+.about-box1-content {
+  padding: 20px;
+}
+
+.about-box1 h2 {
+  color: #333;
+}
+
+.about-box1 p {
+  padding: 20px;
+  color: #666;
+}
+
+#contact-details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#contact-details .details{
+  width: 40%;
+}
+#contact-details .details span{
+  font-size: 12px;
+  
+}
+#contact-details .details h2,
+#form-details form h2{
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+#contact-details .details h3{
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+#contact-details .details li{
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+#contact-details .details li i{
+  font-size: 14px;
+  padding-right: 22px;
+}
+#contact-details .details li p{
+  margin: 0;
+  font-size: 14px;
+  color: #000;
+}
+#contact-details .map{
+  width: 55%;
+  height: 400px;
+}
+#contact-details .map iframe{
+  border:0;
+  width: 100%;
+  height: 100%;
+}
+#contact-details .map h3{
+  padding-bottom: 10px;
+}
+#form-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px;
+  padding: 80px;
+  border: 1px solid #e1e1e1;
+}
+#form-details form{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#form-details form span{
+  font-size: 12px;
+}
+#form-details form input,
+#form-details form textarea{
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 20px;
+  border: 1px solid #e1e1e1;
+}
+#form-details form button{
+  background-color: #2545fd;
+  color: #fff;
+}
+#form-details form button:hover{
+  background-color: #fff;
+  color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:799px){
+  .section-p1{
+    padding: 40px 40px;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #e3E6F3;
+    box-shadow: 0 40px 60px rgba(0,0,0,0.01);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+ }
+#navbar li{
+  margin-bottom: 25px;
+}
+
+#navbar.active{
+  right: 0px;
+}
+
+#mobile{
+  display: flex;
+  align-items: center;
+}
+#mobile i{
+  color: #000;
+  font-size: 24px;
+  padding-left: 20px;
+}
+#close{
+  display: initial;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  color: #222;
+  font-size: 24px;
+}
+#lg-bag{
+  display: none;
+}
+#hero{
+  height: 90vh;
+  padding: 0 80px;
+  background-position: top 30% right 30%;
+}
+#feature{
+  justify-content: center;
+}
+#feature .fe-box{
+  margin: 15px 15px;
+}
+#product1 .pro-container{
+  justify-content: center;
+}
+#product1 .pro{
+  margin: 15px;
+}
+#banner{
+  height: 25vh;
+}
+#sm-banner .banner-box{
+ 
+  min-width: 100%;
+  height: 30vh;
+}
+#newsletter .form{
+  width: 70%;
+}
+#sm-banner .banner-box1 {
+ 
+  min-width: 100%;
+  height: 30vh;
+}
+#about1 {
+  margin: 10px;
+  padding-top: 10px;
+}
+.about-box1 {
+ margin-top: 10%;
+}
+
+}
+@media (max-width: 477px){
+  .section-p1{
+    padding: 20px;
+  }
+  #header{
+    padding: 10px 30px;
+  }
+  h1{
+    font-size: 38px;
+  }
+  h2{
+    font-size: 32px;
+  }
+  #hero{
+    padding: 0 20px;
+    background-position: 55%;
+  }
+  #feature{
+    justify-content: space-between;
+  }
+  #feature .fe-box{
+    width: 155px;
+    margin: 0 0 15px 0;
+  }
+  #product1 .pro{
+    width: 100%;
+  }
+  #banner{
+    height: 45vh;
+  }
+  #sm-banner .banner-box{
+    height: 40vh;
+  }
+  #sm-banner .banner-box1{
+    margin-top: 20px;
+  }
+  #newsletter{
+    padding: 40px 20px;
+  }
+  #newsletter .form{
+    width: 100%;
+  }
+  footer .copyright{
+    text-align: start;
+  }
+  /*single pro details*/
+  #prodetails{
+    display: flex;
+    flex-direction: column;
+  }
+  #contact-details {
+    flex-direction: column;
+}
+#contact-details .details {
+  width: 100%;
+  margin-bottom: 30px;
+}
+#contact-details .map {
+  width: 100%;
+}
+#form-details {
+
+  align-items: center;
+  margin: 50px;
+  padding: 30px 10px;
+  flex-wrap: wrap;
+}
+#form-details form {
+  width: 100%;
+}
+.modal-content {
+  margin-top: 50%;
+  width: 70%;
+}
+#sm-banner {
+  flex-direction: column;
+  justify-content: space-between;
+}
+}

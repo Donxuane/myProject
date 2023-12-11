@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AutoSpec Georgia</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/bb43ca0795.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+       <section id="header">
+        <a href="front.html" title="autospec"><img src="photo/autospec.jpg" class="logo" alt="" widht="30" height="40"></a>
+        <div>
+            <div>
+                <ul id="navbar">
+                    <li><a  href="front.html">მთავარი</a></li>
+                    <li><a class="active" href="shop.html">ავტომობილი</a></li>
+                    <li><a  href="blog.html">Blog</a></li>
+                    <li><a href="about.html">ჩვენს შესახებ</a></li>
+                    <li><a href="contact.html">კონტაქტი</a></li>
+                    <li><a  href="cart.html" title="autospec"><i class="fa-solid fa-car"></i></a></li>
+                    <li><a href="#" id="close" title="#"><i class="fa-solid fa-xmark"></i></a></li>
+                </ul>
+                <div id="mobile">
+                    <a href="cart.html" title="autospec"><i class="fa-solid fa-car"></i></a>
+                    <a ><i id="bar" class="fa-solid fa-bars"></i></a>
+                </div>
+            </div>
+        </div>
+       </section>
+       <section id="prodetails" class="section-p1">
+        
+        <img id="main-photo" src="photo/carssss/R00194773-21fr.jpg" alt="Main Photo" onclick="openModal('photo/carssss/R00194773-21fr.jpg', 0)">
+
+        <div id="modal">
+            <div id="modal-content">
+                <span id="close-modal" onclick="closeModal()">&times;</span>
+                <img id="modal-photo" class="modal-photo" src="" alt="Modal Photo">
+                <span id="prev-photo" onclick="changePhoto(-1)">&#8249;</span>
+                <span id="next-photo" onclick="changePhoto(1)">&#8250;</span>
+            </div>
+        </div>
+      
+
+
+        <div class="single-pro-details">
+            <h6>JAPAN</h6>
+            <h2>Toyota Aqua s packet</h2>
+            <h4>წელი: 2015</h4>
+            <h4>ფასი ფოთამდე: $4500</h4>
+            <h4>გარბენი: 111970კმ</h4>
+            <div class="button-select">
+                <button onclick="toggleOptions()">შეამოწმე</button>
+                <div class="options" id="options">
+                  <a href="https://www.msc.com/en/track-a-shipment?params=dHJhY2tpbmdOdW1iZXI9R0VTVTYxODg1ODUmdHJhY2tpbmdNb2RlPTA%3D"><button onclick="redirectToPage('page1')" >მანქანის მდებარეობა</button></a>
+                  <button onclick="redirectToPage('page2')">კონტეინერის სურათები</button>
+                  <button onclick="redirectToPage('page3')">კუზაოს ნომერი/vin</button>
+                </div>
+              </div>
+        </div>
+    </section>
+    <section id="prodetails1" class="section-p1">
+        <button title="#" class="normal" onclick="addToCart('Toyota Aqua 2015 s packet', 4500, 'photo/carssss/R00194773-20shepaseba.jpg')">ფავორიტებში დამატება</button>
+        <h4>"დეტალური აღწერა"</h4>
+        <span>მანქანა არის იდეალურ მდგომარეობაში, 3.5 შეფასებით,
+            სტარტ/სტოპ-ით და ბევრი სხვა საინტერესო დეტალით, 
+            ყიდვის შემთხვევაში მანქანა გადმოვა თქვენს სახელზე რისთვისაც 
+            უნდა გამოგვიგზავნოთ მეილზე თქვენი პირადი მონაცემები.
+        </span>
+    </section>
+        <script>
+     /*ღილაკის ჩამოშლის ფუნქცია*/     
+    function toggleOptions() {
+      var options = document.getElementById("options");
+      options.style.display = options.style.display === "block" ? "none" : "block";
+    }
+    /*რომელიც მოდის აქამდე*/
+  
+            var currentPhotoIndex = 0;
+    var photoUrls = ["photo/carssss/R00194773-21fr.jpg", "photo/carssss/R00194773-22.jpg", "photo/carssss/R00194773-20shepaseba.jpg"]; // ჩასვი სურათები რომ აჩვენო
+
+    function openModal(imageUrl, index) {
+        var modal = document.getElementById("modal");
+        var modalPhoto = document.getElementById("modal-photo");
+
+        currentPhotoIndex = index;
+        modalPhoto.src = imageUrl;
+        modal.style.display = "flex";
+    }
+
+
+    function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    
+
+    function changePhoto(step) {
+        currentPhotoIndex += step;
+
+        if (currentPhotoIndex < 0) {
+            currentPhotoIndex = photoUrls.length - 1;
+        } else if (currentPhotoIndex >= photoUrls.length) {
+            currentPhotoIndex = 0;
+        }
+
+        var modalPhoto = document.getElementById("modal-photo");
+        modalPhoto.src = photoUrls[currentPhotoIndex];
+    }
+
+    // Close the modal if the user clicks outside the modal content
+    window.onclick = function (event) {
+        var modal = document.getElementById("modal");
+        if (event.target === modal) {
+            closeModal();
+        }
+    };
+        </script>
+       
+       <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext" >
+            <h4>დარეგისტრირდით</h4>
+            <p>და მიიღეთ დეტალური ინფორმაცია თქვენს კითხვებზე</p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your Email Address">
+            <button class="normal">Sign up</button>
+
+        </div>
+       </section>
+       <footer class="section-p1" id="inf">
+        <div class="col">
+            <img class="logo" src="photo/autospec.jpg" alt="" widht="30" height="40">
+            <h4>Contact</h4>
+            <p><strong>ტელეფონი:</strong> +995 598 229 888</p>
+            <p><strong>სამუშაო საათები:</strong> ორშ-კვი, 10:00-20:00</p>
+            <div class="follow">
+                <h4>ჩვენი სოციალური გვერდები</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">ჩვენს შესახებ</a>
+            <a href="#">კომფიდენციალურობა</a>
+            <a href="#">ვადები და პირობები</a>
+            <a href="#">დაგვიკავშირდით</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">შესვლა</a>
+            <a href="#">ჩემი ავტომობილი</a>
+            <a href="#">ავტომობილის მდებარეობა</a>
+            <a href="#">დახმარება</a>
+        </div>
+
+        <div class="copyright">
+            <p>© 2023, AutoSpec Georgia - Official website</p>
+        </div>
+
+       </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

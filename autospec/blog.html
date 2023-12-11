@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AutoSpec Georgia</title>
+        <link rel="stylesheet" href="blogistvis/blogstyle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css" />
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/bb43ca0795.js" crossorigin="anonymous"></script>
+       
+    </head>
+    <body>
+       <section id="header">
+        <a href="front.html" title="autospec"><img src="photo/autospec.jpg" class="logo" alt="" widht="30" height="40"></a>
+        <div>
+            <ul id="navbar">
+                <li><a  href="front.html">მთავარი</a></li>
+                <li><a href="shop.html">ავტომობილები</a></li>
+                <li><a class="active" href="blog.html">Blog</a></li>
+                <li><a href="about.html">ჩვენს შესახებ</a></li>
+                <li><a href="contact.html">კონტაქტი</a></li>
+                <li><a href="cart.html" title="autospec"><i class="fa-solid fa-car"></i></a></li>
+                <li><a href="#" id="close" title="#"><i class="fa-solid fa-xmark"></i></a></li>
+            </ul> 
+            <div id="mobile">
+              <a href="cart.html" title="autospec"><i class="fa-solid fa-car"></i></a>
+              <a ><i id="bar" class="fa-solid fa-bars"></i></a>
+          </div>
+        </div>
+       </section>
+       <section id="page_headerblog">
+        <h2>#დაპოსტე_რამე</h2>
+        <p>შეაფასე ჩვენი მომსახურება, ან გადახედე რას ფიქრობენ სხვები</p>
+       </section>
+       <section id="post_function">
+        <header>
+    
+            <button onclick="openModal()">როგორ მოგწონს?</button>
+          </header>
+        
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <form id="postForm" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="text">დაწერე რამე:</label>
+                  <textarea name="text" id="text" rows="4" required></textarea>
+                </div>
+        
+                <div class="star-rating-container form-group">
+                  <label class="star-rating-label" for="rating">შეაფასე:</label>
+                  <div id="rating" class="star-rating"></div>
+                </div>
+        
+                <div class="photo-upload-container form-group">
+                  <label for="image">ატვირთე ფოტო(სურვილისამებრ):</label>
+                  <label for="image" class="file-upload-button">
+                    <input type="file" name="image" id="image" accept="image/*">
+                  </label>
+                  
+                  <img id="photo-preview" alt="Uploaded Photo Preview">
+                </div>
+        
+                <div class="email-container form-group">
+                  <label for="email">სახელი(რაიმე მოგონილი ან ნამდვილი):</label>
+                  <input type="email" name="email" id="email" required>
+                </div>
+        
+                <button type="button" onclick="submitForm()">გამოქვეყნება</button>
+              </form>
+            </div>
+          </div>
+        
+          <div class="post-container" id="postContainer"></div>
+        
+          <div class="pagination" id="pagination"></div>
+        
+          <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+          <script src="client.js"></script>
+       </section>
+       <section id="newsletter" class="section-p1 section-m1">
+        <div class="newstext" >
+            <h4>დარეგისტრირდით</h4>
+            <p>და მიიღეთ დეტალური ინფორმაცია თქვენს კითხვებზე</p>
+        </div>
+        <div class="form">
+            <input type="text" placeholder="Your Email Address">
+            <button class="normal">Sign up</button>
+
+        </div>
+       </section>
+
+       <footer class="section-p1" id="inf">
+        <div class="col">
+            <img class="logo" src="photo/autospec.jpg" alt="" widht="30" height="40">
+            <h4>Contact</h4>
+            <p><strong>ტელეფონი:</strong> +995 598 229 888</p>
+            <p><strong>სამუშაო საათები:</strong> ორშ-კვი, 10:00-20:00</p>
+            <div class="follow">
+                <h4>ჩვენი სოციალური გვერდები</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">ჩვენს შესახებ</a>
+            <a href="#">კომფიდენციალურობა</a>
+            <a href="#">ვადები და პირობები</a>
+            <a href="#">დაგვიკავშირდით</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">შესვლა</a>
+            <a href="#">ჩემი ავტომობილი</a>
+            <a href="#">დახმარება</a>
+        </div>
+
+        <div class="copyright">
+            <p>© 2023, AutoSpec Georgia - Official website</p>
+        </div>
+
+       </footer>
+
+       
+
+        <script src="script.js"></script>
+        <script src="blogistvis/client.js"></script>
+    </body>
+</html>
